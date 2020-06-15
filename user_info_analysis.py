@@ -74,7 +74,7 @@ end_date_ep
 ###query
 query_cursor = db.issues_info_all.find({
   "issuer_id": "551196"   #{"user_id": {$in : ["79138"]}}
-   ,"issue_created_at": { "$gt": (1583692200    000), "$lt": (1585593000000)}
+   ,"issue_created_at": { "$gt": (158369220 0000), "$lt": (1585593000000)}
  })
 
 ## epoch to datetime
