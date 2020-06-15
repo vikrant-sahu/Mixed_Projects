@@ -2,7 +2,7 @@
 """
 Created on Fri Mar 20 13:54:24 2020
 
-@author: vikrant.sahu
+@author: vikrant
 """
 
 import pymongo
