@@ -16,7 +16,7 @@ from dateutil.parser import parse
 
 
 
-#------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
 # function definition section
 
 # function to convert the epoch values to UTC date format
@@ -65,17 +65,7 @@ def userTimeFrame(userId):
     timeFrame=[firstWeekStartEp,lastWeekEndEp];
     return(timeFrame)
  
-#function to create a summarized collection for weeekly/monthly 
-def summarizedTable(userId,firstDurationStartEp,lastDurationEndEp,baseEpoch):
-    columnNames = ['user_id','week_start_epoch'];
-    #create a df that holds the week start epoch values from start to current date
-    intermediateWeekStart = findIntermediateDurationStart(firstDurationStartEp,lastDurationEndEp,baseEpoch);
-    # Create a new df and populate the collection with user id and start and end epoch values
-    weeklySummarizedDf = pd.DataFrame(columns = columnNames);
-    weeklySummarizedDf['week_start_epoch'] = intermediateWeekStart ;
-    weeklySummarizedDf['user_id'] = 'userId' ; #replace with the userId
-    weeklySummarizedDf['week_start_utc'] = weeklySummarizedDf['week_start_epoch'] .apply(convertEpochToUtc)
-    return (weeklySummarizedDf)
+
 #------------------------------------------------------------------------------------------------
 #function to perform data filteration on any collection for a given user TimeFrame
     specificUserPullInfo = collectionDf[collectionDf[collectionUserFieldName] == userId];
