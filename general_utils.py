@@ -23,7 +23,7 @@ def load_file_pickle(fname:str):
 
 def read_training_files(data_path:str):
     """
-    Read data from directory
+    Read data from directory directly
     """
     PATH = Path(data_path)
 
